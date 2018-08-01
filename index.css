@@ -1,0 +1,107 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+}
+
+#userContent{
+    border: 1px solid black;
+    width: 60vw;
+    margin: 0 auto;
+    border-radius: 4px;
+    height: 70vh;
+    letter-spacing: .04em;
+    padding: 1rem;
+}
+
+div{
+    position: relative;
+}
+
+aside {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 15vw;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.purpleBorder {
+    border-bottom: 1.5px solid #BB8FCE;
+
+}
+
+.purpleBorder:hover {
+    background-color: #BB8FCE;
+    border: 1px solid #BB8FCE;
+    border-radius: 4px;
+}
+
+.blueBorder {
+    border-bottom: 1.5px solid #85C1E9;
+
+}
+
+.blueBorder:hover {
+    background-color: #85C1E9;
+    border: 1px solid #85C1E9;
+    border-radius: 4px;
+}
+
+#userContent div {
+    display: inline;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color:white;
+    z-index: 2;
+    left: 0;
+}
+
+.hidden {
+    display:none;
+}
+
+.visible{
+    border:1px solid grey;
+    border-radius: 4px;
+    display: block;
+}
+
+.visible li {
+    list-style-type: none;
+}
+
+.purpleBorder ul li:hover {
+    background-color: #E3CEEC;
+    cursor: pointer;
+}
+
+.blueBorder ul li:hover {
+    background-color: #EBF5FB;
+    cursor: pointer;
+}
+
+#maleCircle {
+    background-color: #85C1E9;
+}
+
+#femCircle {
+    background-color: #BB8FCE;
+}
+
+#maleCircle,
+#femCircle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
