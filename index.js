@@ -174,7 +174,6 @@ var maleWords = {
         }
         parent.removeChild(highlightedContainer[0]);
     }
-    findWords(oldCaretPosition);
   }
 
   //when user chooses an alternative word this resets the counter
@@ -185,10 +184,11 @@ var maleWords = {
   
   
   document.getElementById('userContent').addEventListener('keyup', function(e) {
-    if(e.keyCode === 13 || e.keyCode === 32){
+    if(e.keyCode === 32 || e.keyCode === 46){
         var {caretPos: oldCaretPosition, caretNodeIndex: oldCaretNode} = getCaretPosition(document.getElementById('userContent'));
         if(document.getElementById('userContent').children.length > 0){
             removeHtmlFormatting(oldCaretPosition);
+            findWords(oldCaretPosition);
         } else {
             findWords(oldCaretPosition, oldCaretNode);
         }
@@ -203,7 +203,7 @@ var maleWords = {
       sel = window.getSelection();
       if (sel.rangeCount) {
         range = sel.getRangeAt(0);
-        caretPos = range.endOffset;
+        caretPos = range.startOffset;
         var caretNode = range.endContainer;
         caretNodeIndex = Array.from(range.commonAncestorContainer.parentNode.childNodes).indexOf(caretNode)
 

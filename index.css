@@ -31,7 +31,7 @@ h1{
 
 .purpleBorder {
     border-bottom: 1.5px solid #BB8FCE;
-
+    cursor: pointer;
 }
 
 .purpleBorder:hover {
@@ -42,7 +42,7 @@ h1{
 
 .blueBorder {
     border-bottom: 1.5px solid #85C1E9;
-
+    cursor: pointer;
 }
 
 .blueBorder:hover {
