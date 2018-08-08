@@ -185,7 +185,7 @@ var maleWords = {
   
   
   document.getElementById('userContent').addEventListener('keyup', function(e) {
-    if(e.keyCode === 13 || e.keyCode === 46 || e.keyCode === 32){
+    if(e.keyCode === 13 || e.keyCode === 32){
         var {caretPos: oldCaretPosition, caretNodeIndex: oldCaretNode} = getCaretPosition(document.getElementById('userContent'));
         if(document.getElementById('userContent').children.length > 0){
             removeHtmlFormatting(oldCaretPosition);
@@ -230,7 +230,7 @@ var maleWords = {
   }
 
   function getTextNode(node) {
-    if (node.className === 'purpleBorder' && node.className === 'blueBorder') {
+    if (node.className === 'purpleBorder' || node.className === 'blueBorder') {
         node = node.childNodes[0]
     }
     return node
