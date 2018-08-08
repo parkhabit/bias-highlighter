@@ -248,7 +248,7 @@ var maleWords = {
     return {currentNode, caretPosition}
   }
   
-  function setCaretPosition(oldCaretPosition, oldCaretNode){
+  function setCaretPosition(oldCaretPosition){
     var el = document.getElementById("userContent");
     console.log(oldCaretPosition, el);
     var {currentNode, caretPosition} = getSelectionNode(el, oldCaretPosition)
